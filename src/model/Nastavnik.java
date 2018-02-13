@@ -16,14 +16,8 @@ public class Nastavnik extends Osoba {
 	}
 	
 	public void deletePredmet (Predmet p) {
-		for (Predmet predmet : predmeti)
-		{
-			if (predmet.getId() == p.getId())
-			{
-				predmeti.remove(p);
-				return;
-			}
-		}
+		if (predmeti.contains(p))
+			predmeti.remove(p);
 	}
 	
 	public Predmet getPredmetById (int id) {

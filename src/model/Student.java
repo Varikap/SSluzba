@@ -6,8 +6,7 @@ public class Student extends Osoba {
 	private String index;
 	private IspitnaPrijava ispitnaPrijava;
 	private ArrayList<Predmet> predmeti;
-	
-	// predmeti koje pohadja
+
 
 	public Student(int id, String index, String ime, String prezime, String grad) {
 		super(id, ime, prezime, grad);
@@ -21,7 +20,10 @@ public class Student extends Osoba {
 	public void deletePredmete() {
 		predmeti = new ArrayList<Predmet>();
 	}
-	
+	public void deletePredmet(Predmet p) {
+		if (predmeti.contains(p))
+			predmeti.remove(p);
+	}
 	public ArrayList<Predmet> getPredmeti() {
 		return predmeti;
 	}
@@ -38,6 +40,7 @@ public class Student extends Osoba {
 	public IspitnaPrijava getIspitnaPrijava () {
 		return ispitnaPrijava;
 	}
+	
 	
 	public void setispitnaPrijava(IspitnaPrijava prijava) {
 		

@@ -30,14 +30,8 @@ public class IspitniRok {
 	}
 	
 	public void deletePrijava(IspitnaPrijava prijava) {
-		for (IspitnaPrijava i : prijave)
-		{
-			if (i.getId() == prijava.getId())
-			{
-				prijave.remove(i);
-				return;
-			}
-		}
+		if(prijave.contains(prijava))
+			prijave.remove(prijava);
 	}
 	
 	public ArrayList<IspitnaPrijava> getPrijave() {

@@ -21,14 +21,8 @@ public class Predmet {
 	}
 	
 	public void deleteStudent(Student student) {
-		for (Student s : studenti)
-		{
-			if (s.getId() == student.getId())
-			{
-				studenti.remove(s);
-				return;
-			}
-		}
+		if (studenti.contains(student))
+			studenti.remove(student);
 	}
 	
 	public ArrayList<Student> getStudente() {
@@ -48,14 +42,8 @@ public class Predmet {
 	}
 	
 	public void deleteNastavnik(Nastavnik nastavnik) {
-		for (Nastavnik n : nastavnici)
-		{
-			if (n.getId() == nastavnik.getId())
-			{
-				nastavnici.remove(n);
-				return;
-			}
-		}
+		if (nastavnici.contains(nastavnik))
+			nastavnici.remove(nastavnik);
 	}
 	
 	public ArrayList<Nastavnik> getNastavnike() {
@@ -76,14 +64,8 @@ public class Predmet {
 	}
 	
 	public void deletePrijava(IspitnaPrijava prijava) {
-		for (IspitnaPrijava i : prijave)
-		{
-			if (i.getId() == prijava.getId())
-			{
-				prijave.remove(i);
-				return;
-			}
-		}
+		if (prijave.contains(prijava))
+			prijave.remove(prijava);
 	}
 	
 	public ArrayList<IspitnaPrijava> getPrijave() {
