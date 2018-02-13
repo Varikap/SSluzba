@@ -1,3 +1,9 @@
+#TestFiles
+Test.*
+test.*
+testis.*
+Testis.*
+
 #Files
 .settings
 *.classpath

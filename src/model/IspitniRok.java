@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,7 +10,7 @@ public class IspitniRok {
 	private String naziv;
 	private Date pocetak;
 	private Date kraj;
-//	spisak ispitnih prijava
+	private ArrayList<IspitnaPrijava> prijave;
 
 	private SimpleDateFormat sd = new SimpleDateFormat("DD-MM-YYYY");
 	public IspitniRok(int id, String naziv, String pocetak, String kraj) {
@@ -23,6 +24,35 @@ public class IspitniRok {
 			e.printStackTrace();
 		}
 	}
+	
+	public void addPrijava (IspitnaPrijava n)  {
+		prijave.add(n);
+	}
+	
+	public void deletePrijava(IspitnaPrijava prijava) {
+		for (IspitnaPrijava i : prijave)
+		{
+			if (i.getId() == prijava.getId())
+			{
+				prijave.remove(i);
+				return;
+			}
+		}
+	}
+	
+	public ArrayList<IspitnaPrijava> getPrijave() {
+		return prijave;
+	}
+	
+	public IspitnaPrijava getIspitnaPrijavaById(int id) {
+		for (IspitnaPrijava prijava : prijave)
+		{
+			if (prijava.getId() == id)
+				return prijava;
+		}
+		return null;
+	}
+
 
 	public int getId() {
 		return id;
