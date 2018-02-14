@@ -25,6 +25,7 @@ public class IspitniRok implements Serializable {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
+		this.prijave = new ArrayList<IspitnaPrijava>();
 	}
 	
 	public void addPrijava (IspitnaPrijava n)  {

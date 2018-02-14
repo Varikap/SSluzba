@@ -11,6 +11,7 @@ public class Nastavnik extends Osoba implements Serializable {
 	public Nastavnik(int id, String ime, String prezime, String grad, String zvanje) {
 		super(id, ime, prezime, grad);
 		this.zvanje = zvanje;
+		this.predmeti = new ArrayList<Predmet>();
 	}
 
 	public void addPredmet(Predmet p) {

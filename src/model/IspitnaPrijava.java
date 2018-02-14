@@ -14,8 +14,9 @@ public class IspitnaPrijava implements Serializable{
 
 	private SimpleDateFormat sd = new SimpleDateFormat("DD-MM-YYYY");
 
-	public IspitnaPrijava(int teorija, int zadaci, String datumPrijave) {
+	public IspitnaPrijava(int id,int teorija, int zadaci, String datumPrijave) {
 		super();
+		this.id = id;
 		this.teorija = teorija;
 		this.zadaci = zadaci;
 		try {

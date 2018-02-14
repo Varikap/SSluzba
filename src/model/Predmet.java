@@ -16,6 +16,9 @@ public class Predmet implements Serializable {
 		super();
 		this.id = id;
 		this.naziv = naziv;
+		this.studenti = new ArrayList<Student>();
+		this.nastavnici = new ArrayList<Nastavnik>();
+		this.prijave = new ArrayList<IspitnaPrijava>();
 	}
 
 	public void addStudent (Student s)  {
