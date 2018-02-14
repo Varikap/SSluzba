@@ -13,6 +13,7 @@ public class Student extends Osoba implements Serializable{
 	public Student(int id, String index, String ime, String prezime, String grad) {
 		super(id, ime, prezime, grad);
 		this.index = index;
+		predmeti = new ArrayList<Predmet>();
 	}
 
 	public void addPredmet(Predmet p) {
