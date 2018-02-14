@@ -1,6 +1,9 @@
 package model;
 
-public abstract class Osoba {
+import java.io.Serializable;
+
+public abstract class Osoba implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String ime;
 	private String prezime;

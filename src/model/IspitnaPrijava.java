@@ -1,10 +1,12 @@
 package model;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class IspitnaPrijava {
+public class IspitnaPrijava implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private int teorija;
 	private int zadaci;

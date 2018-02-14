@@ -1,8 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Student extends Osoba {
+public class Student extends Osoba implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private String index;
 	private IspitnaPrijava ispitnaPrijava;
 	private ArrayList<Predmet> predmeti;

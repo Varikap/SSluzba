@@ -2,10 +2,12 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class IspitniRok {
+public class IspitniRok implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String naziv;
 	private Date pocetak;
